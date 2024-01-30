@@ -1,0 +1,7 @@
+
+State Machine - |UART_TX|state
+Name state.DONE_TRANSMIT state.TRANSMITTING state.START_TRANSMIT state.IDLE 
+state.IDLE 0 0 0 0 
+state.START_TRANSMIT 0 0 1 1 
+state.TRANSMITTING 0 1 0 1 
+state.DONE_TRANSMIT 1 0 0 1 

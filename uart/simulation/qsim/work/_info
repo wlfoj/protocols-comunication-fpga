@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/washi/OneDrive/Documentos/Github/protocols-comunication-fpga/uart/simulation/qsim
+vUART_TX
+!s110 1706062280
+!i10b 1
+!s100 CQW_9kamSWVK:OKUYEl4@0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IfRZJd0hdA^gN6hSS>5:Qj1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1706062280
+8uart_fpga.vo
+Fuart_fpga.vo
+!i122 6
+L0 32 5124
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1706062280.000000
+!s107 uart_fpga.vo|
+!s90 -work|work|uart_fpga.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@u@a@r@t_@t@x
+vUART_TX_vlg_vec_tst
+!s110 1706062281
+!i10b 1
+!s100 <74L;KmH41z_C3`5C`>9K1
+R1
+Iha7oCeknMK47TDBiGo5X>1
+R2
+R0
+w1706062279
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 116
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@u@a@r@t_@t@x_vlg_vec_tst

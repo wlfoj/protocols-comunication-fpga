@@ -1,0 +1,95 @@
+# do uart_fpga.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:11:20 on Jan 23,2024
+# vlog -work work uart_fpga.vo 
+# -- Compiling module UART_TX
+# 
+# Top level modules:
+# 	UART_TX
+# End time: 23:11:20 on Jan 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:11:20 on Jan 23,2024
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module UART_TX_vlg_vec_tst
+# 
+# Top level modules:
+# 	UART_TX_vlg_vec_tst
+# End time: 23:11:21 on Jan 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L maxv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.UART_TX_vlg_vec_tst 
+# Start time: 23:11:21 on Jan 23,2024
+# Loading work.UART_TX_vlg_vec_tst
+# Loading work.UART_TX
+# Loading maxv_ver.maxv_io
+# Loading maxv_ver.maxv_lcell
+# Loading maxv_ver.maxv_asynch_lcell
+# Loading maxv_ver.maxv_lcell_register
+# after#25
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 10500 ps ###############
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~71 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\pos[11] /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\pos[10] /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~60 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\pos[8] /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~48 /lecomb/#IMPLICIT-WIRE(icout0)#807 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~48 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~42 /lecomb/#IMPLICIT-WIRE(icout0)#807 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Mux0~4 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Mux0~1 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Mux0~0 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~18 /lecomb/#IMPLICIT-WIRE(icout)#806 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~18 /lecomb/#IMPLICIT-WIRE(icout1)#808 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~18 /lecomb/#IMPLICIT-WIRE(icout0)#807 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~18 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 0
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\pos[11] /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~66 /lecomb/#IMPLICIT-WIRE(icout1)#808 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~66 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~60 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~65 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~48 /lecomb/#IMPLICIT-WIRE(icout0)#807 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~48 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~54 /lecomb/#IMPLICIT-WIRE(icout0)#807 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~53 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/tmp/lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~6 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~23 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 1
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~66 /lecomb/#IMPLICIT-WIRE(icout1)#808 @ sub-iteration 2
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~66 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 2
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+#   Active process: /UART_TX_vlg_vec_tst/i1/\Add0~71 /lecomb/#IMPLICIT-WIRE(data)#805 @ sub-iteration 2
+#     Source: $MODEL_TECH/../altera/verilog/src/maxv_atoms.v:1096
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10500 ps.
+# End time: 23:11:21 on Jan 23,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

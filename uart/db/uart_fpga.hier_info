@@ -1,0 +1,22 @@
+|uart_tx_8_bits
+tx <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst31.IN0
+en => inst31.IN1
+shift_load => inst10.IN0
+shift_load => inst28.IN0
+shift_load => inst24.IN0
+shift_load => inst20.IN0
+shift_load => inst16.IN0
+shift_load => inst8.IN0
+shift_load => inst4.IN0
+shift_load => inst6.IN0
+D7 => inst15.IN0
+D6 => inst7.IN0
+D5 => inst9.IN0
+D4 => inst17.IN0
+D3 => inst21.IN0
+D2 => inst25.IN0
+D1 => inst29.IN0
+D0 => inst11.IN0
+
+
