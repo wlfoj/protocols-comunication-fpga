@@ -1,5 +1,5 @@
 $date
-	Sat Mar 02 11:28:16 2024
+	Sat Mar 02 14:45:35 2024
 $end
 $version
 	Icarus Verilog
@@ -18,13 +18,13 @@ $scope module mod_main $end
 $var wire 1 # btn1 $end
 $var wire 1 $ btn2 $end
 $var wire 1 % clk $end
-$var wire 16 ' regs_w [15:0] $end
+$var wire 2 ' regs_w [1:0] $end
 $var wire 1 ( pulse_increase $end
 $var wire 1 ) pulse_decrease $end
 $var wire 1 ! led_r $end
 $var wire 1 " led_g $end
 $scope module control_output $end
-$var wire 16 * regs [15:0] $end
+$var wire 2 * regs [1:0] $end
 $var wire 1 ! led_r $end
 $var wire 1 " led_g $end
 $upscope $end
@@ -46,7 +46,7 @@ $scope module saturation $end
 $var wire 1 % clk $end
 $var wire 1 ) decrease $end
 $var wire 1 ( increase $end
-$var reg 16 / register [15:0] $end
+$var reg 2 / register [1:0] $end
 $upscope $end
 $upscope $end
 $upscope $end
@@ -173,6 +173,7 @@ b1 .
 #33
 0(
 b10 .
+1"
 b11 '
 b11 *
 b11 /
@@ -228,6 +229,7 @@ b1 ,
 #53
 0)
 b10 ,
+0"
 b10 '
 b10 *
 b10 /
