@@ -1,0 +1,271 @@
+#! c:/iverilog-x64/bin/vvp
+:ivl_version "10.1 (stable)" "(v10_1_1)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0000000001065ec0 .scope module, "MAIN" "MAIN" 2 6;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "btn1"
+    .port_info 2 /INPUT 1 "btn2"
+    .port_info 3 /OUTPUT 1 "led_r"
+    .port_info 4 /OUTPUT 1 "led_g"
+P_000000000106ff60 .param/l "width" 0 2 6, +C4<00000000000000000000000000000100>;
+o000000000107b8d8 .functor BUFZ 1, C4<z>; HiZ drive
+v000000000107b300_0 .net "btn1", 0 0, o000000000107b8d8;  0 drivers
+o000000000107b728 .functor BUFZ 1, C4<z>; HiZ drive
+v000000000107b3a0_0 .net "btn2", 0 0, o000000000107b728;  0 drivers
+o000000000107b758 .functor BUFZ 1, C4<z>; HiZ drive
+v000000000107a720_0 .net "clk", 0 0, o000000000107b758;  0 drivers
+v000000000107aea0_0 .net "led_g", 0 0, L_00000000010d4cc0;  1 drivers
+v00000000010d5580_0 .net "led_r", 0 0, L_00000000010d59e0;  1 drivers
+v00000000010d5300_0 .net "pulse_decrease", 0 0, L_00000000010d4680;  1 drivers
+v00000000010d5760_0 .net "pulse_increase", 0 0, L_00000000010d4400;  1 drivers
+v00000000010d4540_0 .net "regs_w", 4 0, v000000000107ae00_0;  1 drivers
+S_0000000001066040 .scope module, "control_output" "CONTROL_LED" 2 18, 3 8 0, S_0000000001065ec0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 5 "regs"
+    .port_info 1 /OUTPUT 1 "led_r"
+    .port_info 2 /OUTPUT 1 "led_g"
+P_000000000106fbe0 .param/l "width" 0 3 8, +C4<00000000000000000000000000000100>;
+L_00000000028e0118 .functor BUFT 1, C4<11111>, C4<0>, C4<0>, C4<0>;
+v000000000107a7c0_0 .net/2u *"_s0", 4 0, L_00000000028e0118;  1 drivers
+L_00000000028e0160 .functor BUFT 1, C4<00000>, C4<0>, C4<0>, C4<0>;
+v000000000107b120_0 .net/2u *"_s4", 4 0, L_00000000028e0160;  1 drivers
+v000000000107af40_0 .net "led_g", 0 0, L_00000000010d4cc0;  alias, 1 drivers
+v000000000107b440_0 .net "led_r", 0 0, L_00000000010d59e0;  alias, 1 drivers
+v000000000107b4e0_0 .net "regs", 4 0, v000000000107ae00_0;  alias, 1 drivers
+L_00000000010d4cc0 .cmp/eq 5, v000000000107ae00_0, L_00000000028e0118;
+L_00000000010d59e0 .cmp/eq 5, v000000000107ae00_0, L_00000000028e0160;
+S_0000000001136820 .scope module, "debounce_decrease_btn" "DEBOUNCE" 2 14, 4 2 0, S_0000000001065ec0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "CLK_FPGA"
+    .port_info 1 /INPUT 1 "Btn"
+    .port_info 2 /OUTPUT 1 "Pulse"
+P_00000000010661c0 .param/l "A" 0 4 8, C4<00>;
+P_00000000010661f8 .param/l "B" 0 4 9, C4<01>;
+P_0000000001066230 .param/l "C" 0 4 10, C4<10>;
+v000000000107aa40_0 .net "Btn", 0 0, o000000000107b728;  alias, 0 drivers
+v000000000107afe0_0 .net "CLK_FPGA", 0 0, o000000000107b758;  alias, 0 drivers
+v000000000107a900_0 .net "Pulse", 0 0, L_00000000010d4680;  alias, 1 drivers
+L_00000000028e00d0 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v000000000107a5e0_0 .net/2u *"_s0", 1 0, L_00000000028e00d0;  1 drivers
+v000000000107a9a0_0 .var "nextstate", 1 0;
+v000000000107a860_0 .var "state", 1 0;
+E_00000000010700a0 .event edge, v000000000107a860_0, v000000000107aa40_0;
+E_000000000106f760 .event posedge, v000000000107afe0_0;
+L_00000000010d4680 .cmp/eq 2, v000000000107a860_0, L_00000000028e00d0;
+S_00000000011369a0 .scope module, "debounce_increase_btn" "DEBOUNCE" 2 13, 4 2 0, S_0000000001065ec0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "CLK_FPGA"
+    .port_info 1 /INPUT 1 "Btn"
+    .port_info 2 /OUTPUT 1 "Pulse"
+P_0000000001136b20 .param/l "A" 0 4 8, C4<00>;
+P_0000000001136b58 .param/l "B" 0 4 9, C4<01>;
+P_0000000001136b90 .param/l "C" 0 4 10, C4<10>;
+v000000000107a680_0 .net "Btn", 0 0, o000000000107b8d8;  alias, 0 drivers
+v000000000107ab80_0 .net "CLK_FPGA", 0 0, o000000000107b758;  alias, 0 drivers
+v000000000107aae0_0 .net "Pulse", 0 0, L_00000000010d4400;  alias, 1 drivers
+L_00000000028e0088 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v000000000107ac20_0 .net/2u *"_s0", 1 0, L_00000000028e0088;  1 drivers
+v000000000107b080_0 .var "nextstate", 1 0;
+v000000000107b1c0_0 .var "state", 1 0;
+E_000000000106f6e0 .event edge, v000000000107b1c0_0, v000000000107a680_0;
+L_00000000010d4400 .cmp/eq 2, v000000000107b1c0_0, L_00000000028e0088;
+S_000000000113dc00 .scope module, "saturation" "SATURATION" 2 16, 5 4 0, S_0000000001065ec0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "increase"
+    .port_info 2 /INPUT 1 "decrease"
+    .port_info 3 /OUTPUT 5 "register"
+P_000000000106f620 .param/l "width" 0 5 4, +C4<00000000000000000000000000000100>;
+v000000000107b260_0 .net "clk", 0 0, o000000000107b758;  alias, 0 drivers
+v000000000107acc0_0 .net "decrease", 0 0, L_00000000010d4680;  alias, 1 drivers
+v000000000107ad60_0 .net "increase", 0 0, L_00000000010d4400;  alias, 1 drivers
+v000000000107ae00_0 .var "register", 4 0;
+    .scope S_00000000011369a0;
+T_0 ;
+    %wait E_000000000106f760;
+    %load/vec4 v000000000107b080_0;
+    %assign/vec4 v000000000107b1c0_0, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_00000000011369a0;
+T_1 ;
+    %wait E_000000000106f6e0;
+    %load/vec4 v000000000107b1c0_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.1, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_1.2, 6;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+    %jmp T_1.4;
+T_1.0 ;
+    %load/vec4 v000000000107a680_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.5, 8;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+    %jmp T_1.6;
+T_1.5 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+T_1.6 ;
+    %jmp T_1.4;
+T_1.1 ;
+    %load/vec4 v000000000107a680_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.7, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+    %jmp T_1.8;
+T_1.7 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+T_1.8 ;
+    %jmp T_1.4;
+T_1.2 ;
+    %load/vec4 v000000000107a680_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.9, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+    %jmp T_1.10;
+T_1.9 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107b080_0, 0;
+T_1.10 ;
+    %jmp T_1.4;
+T_1.4 ;
+    %pop/vec4 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0000000001136820;
+T_2 ;
+    %wait E_000000000106f760;
+    %load/vec4 v000000000107a9a0_0;
+    %assign/vec4 v000000000107a860_0, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0000000001136820;
+T_3 ;
+    %wait E_00000000010700a0;
+    %load/vec4 v000000000107a860_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 2;
+    %cmp/u;
+    %jmp/1 T_3.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 2;
+    %cmp/u;
+    %jmp/1 T_3.1, 6;
+    %dup/vec4;
+    %pushi/vec4 2, 0, 2;
+    %cmp/u;
+    %jmp/1 T_3.2, 6;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+    %jmp T_3.4;
+T_3.0 ;
+    %load/vec4 v000000000107aa40_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_3.5, 8;
+    %pushi/vec4 1, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+    %jmp T_3.6;
+T_3.5 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+T_3.6 ;
+    %jmp T_3.4;
+T_3.1 ;
+    %load/vec4 v000000000107aa40_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_3.7, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+    %jmp T_3.8;
+T_3.7 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+T_3.8 ;
+    %jmp T_3.4;
+T_3.2 ;
+    %load/vec4 v000000000107aa40_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_3.9, 8;
+    %pushi/vec4 2, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+    %jmp T_3.10;
+T_3.9 ;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v000000000107a9a0_0, 0;
+T_3.10 ;
+    %jmp T_3.4;
+T_3.4 ;
+    %pop/vec4 1;
+    %jmp T_3;
+    .thread T_3, $push;
+    .scope S_000000000113dc00;
+T_4 ;
+    %pushi/vec4 0, 0, 5;
+    %store/vec4 v000000000107ae00_0, 0, 5;
+    %end;
+    .thread T_4;
+    .scope S_000000000113dc00;
+T_5 ;
+    %wait E_000000000106f760;
+    %load/vec4 v000000000107ad60_0;
+    %load/vec4 v000000000107ae00_0;
+    %pushi/vec4 31, 0, 5;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %inv;
+    %and;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_5.0, 8;
+    %load/vec4 v000000000107ae00_0;
+    %addi 1, 0, 5;
+    %store/vec4 v000000000107ae00_0, 0, 5;
+    %jmp T_5.1;
+T_5.0 ;
+    %load/vec4 v000000000107acc0_0;
+    %load/vec4 v000000000107ae00_0;
+    %pushi/vec4 0, 0, 5;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %inv;
+    %and;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_5.2, 8;
+    %load/vec4 v000000000107ae00_0;
+    %subi 1, 0, 5;
+    %store/vec4 v000000000107ae00_0, 0, 5;
+    %jmp T_5.3;
+T_5.2 ;
+    %load/vec4 v000000000107ae00_0;
+    %store/vec4 v000000000107ae00_0, 0, 5;
+T_5.3 ;
+T_5.1 ;
+    %jmp T_5;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "../MAIN.v";
+    "../CONTROL_LED.v";
+    "../DEBOUNCE.v";
+    "../SATURATION.v";

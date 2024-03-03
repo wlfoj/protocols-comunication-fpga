@@ -1,0 +1,7 @@
+{
+    "name": "SATTST",
+    "constraintsFile": "conf.cst",
+    "includedFiles": "all",
+    "top": "MAIN",
+    "board": "tangnano1k"
+}

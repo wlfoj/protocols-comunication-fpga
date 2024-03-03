@@ -28,8 +28,10 @@ module test;
         /* Encerro a simulação no tempo 513 */
         # 513 $finish;
     end
-
+    // Para ficar eternamente alternando o estado do bit. Simular o clock
     always #1 clk = ~clk;
+
+    
 
     MAIN #(.width(1)) mod_main(clk, btn1, btn2, led_r, led_g);
 
