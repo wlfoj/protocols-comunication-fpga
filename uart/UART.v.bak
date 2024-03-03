@@ -1,0 +1,3 @@
+module UART(clk_in, rx, tx);
+
+endmodule

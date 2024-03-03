@@ -1,2 +1,3 @@
-# Descrição do projeto e objetivo
-Este projeto apresenta a implementação dos padrões de comunicação UART, SPI e I2C em FPGA (utilizando a liguagem Verilog).
+# Observações
+Neste repositório você encontrar formas de se implementar alguns circuitos digitais em FPGA utilizando Verilog. O foco é nos processos de comunicação, porém há algumas ferramentas que podem auxiliar alguns projetos na pasta 'utils'.  
+Os projetos estão estruturados e com arquivos de configuração para aplicar o código em um FPGA Tang Nano 1K, não vai encontrar a estrutura de projeto gerada pelo Quartus Intel aqui. 
